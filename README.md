@@ -43,7 +43,7 @@ Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una rep
 6. Para que nuestra tarjeta pueda enviar y recibir datos desde las variables en uBidots, es necesario que se obtengan las ID's de cada variable. Para ello dentro de la cuenta de ubidots seleccione la pestaña "Devices" y luego su dispositivo, finalmente seleccione la variable deseada y la id de esta aparecerá en la ficha de la esquina izquierda, guarde esta id. En la siguiente figura de ejemplifica el procedimiento con la variable temperatura.
 ![](images/2018/05/select_id_variable.gif)
 
-9. También es necesario obtener el token de usuario de ubidots, para ello haga click en el usuario en la esquina superior derecha y luego "Api Credentials", seleccione el código llamdo "Default token" y guarde este código. En la siguiente figura se ejemplifica este procedimeinto.
+9. También es necesario obtener el token de usuario de ubidots, para ello haga click en el usuario en la esquina superior derecha y luego "Api Credentials", seleccione en la sección "Tokens" un token, por ejemplo el llamado "Default token" y guarde este código. En la siguiente figura se ejemplifica este procedimeinto.
 ![](images/2018/05/get_token.gif)
 
 7. en el archivo `arduino_ubidots.ino`, modifique las siguientes líneas al inicio del archivo:
