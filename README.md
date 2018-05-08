@@ -4,7 +4,8 @@
 
 ### Creación cuenta en Ubidots
 1. ingrese a la página de uBidots [app.ubidots.com](https://app.ubidots.com) y registrese (pestaña SING UP).
-2. En la pagina de uBidots, seleccione la pestaña "Device" y luego haga click en "Add Device" como se muestra en la siguiente figura
+2. En la pagina de uBidots, seleccione la pestaña "Device" y luego haga click en "Add Device" como se muestra en la siguiente figura.
+
 ![](images/2018/05/create_device.gif)
 Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una representación de nuestra tarjeta Esp8266 en nuestra cuenta de uBidots.
 
@@ -29,7 +30,7 @@ Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una rep
 ## Cableado y Programación de la tarjeta ESP8266
 
 1. Arme el circuito de la siguiente figura para conectar el sensor de temperatura y humedad a la tarjeta.
-![](images/2018/05/cableado_1_esp8266.png)
+![](images/2018/05/cableado_1_esp8266.PNG)
 
 2. Conecte la tarjeta ESP8266 a su computador mediante un cable micro usb, deberá observar que el led del sensor se enciende inmediatamente, si esto no sucede desconecte de inmediato y revise sus conexiones.Luego mueva el interruptor de la tarjeta a la posición "ON".
 
