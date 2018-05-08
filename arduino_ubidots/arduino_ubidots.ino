@@ -8,7 +8,7 @@
 #define ID_H "" // Humedad ID
 #define ID_SL ""// led ID 
 
-#define WIFISSID "ssid" //Wi-Fi SSID
+#define WIFISSID "essid" //Wi-Fi SSID
 #define PASSWORD "passwd" //Wi-Fi password
 
 #define DHTPIN 2 //pin en donde se conectara el pin de datos del sensor DHT11
