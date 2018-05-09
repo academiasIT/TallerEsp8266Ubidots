@@ -41,13 +41,16 @@ Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una rep
 5. Es necesario agregar algunas librerias al proyecto pa`Adafruit_Sensor.h` al ide arduino tal como se hizo ra tener acceso ap API de uBidots y controlar con la librería de uBidots.
 
 9. el sensor de temperatura y humedad DHT11. Para agrear la libreria de uBidots descargue esta en formato zip de este [link](https://github.com/ubidots/ubidots-esp8266), haciendo click en el boton verde llamado "Clone or download" y seleccionado el formato zip como se muestra en la siguiente figura.
+
 ![](images/2018/05/download_ubidots_library_arduino.PNG)
 
 6. Luego en el ide arduino, ir al menu programa->incluir libreria->añadir libreria ZIP como se muestra en la figura.
+
 ![](images/2018/05/anadir_libreria_arduino.PNG)
+
 En el cuadro de dialogo que se abrirá, busque la librería en formato zip que acaba de descargar.
 
-7. Para trabajar con el sensor DHT11, es necesario descargar la librería `Adafruit_SEnsor.h` de el siguietne [link](https://github.com/adafruit/Adafruit_Sensor), tal como en la descarga de la librería anterior, seleccione el botón "clone or download" y luego haga click en "download zip".
+7. Para trabajar con el sensor DHT11, es necesario descargar la librería `Adafruit_SEnsor.h` de el siguiente [link](https://github.com/adafruit/Adafruit_Sensor), tal como en la descarga de la librería anterior, seleccione el botón "clone or download" y luego haga click en "download zip".
 
 8. agregue la librería `Adafruit_Sensor.h` en formato ZIP al ide arduino tal como se hizo con la librería de uBidots.
 
