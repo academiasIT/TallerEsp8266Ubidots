@@ -36,17 +36,33 @@ Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una rep
 3. Abrir el programa IDE de Arduino y configurarlo para la tarjeta utilizada, primero en el menu seleccione Herramientas->Placa->"sparkFun ESP8266 Thing Dev", luego seleccionar el puerto de comunicaciones en Herramientas->puerto->comX (la X es reemplazada según el número que aparesca en cada computador).
 ![](images/2018/05/configure_arduino.gif)
 
-4. Luego, cargue el archivo `arduino_ubidots.ino` mediante el menu Archivo->abrir...
+4. Luego, cargue el archivo `arduino_ubidots.ino` mediante el menu Archivo->abrir... . El archivo esta dentro de este repositorio en la dirección `arduino_ubidots/arduino_ubidots.h`. Puede descargar este repositorio haciendo click en el boton verde llamando "clone or download" al inicio de esta pagina.
 
-5. Modifique el programa con los datos necesarios para la conexión WiFi. Modifique las lineas de código al comienzo del archivo: `#define WIFISSID "essid"` reemplazando la palabra essid por el nombre de su red, también modifique la línea `#define PASSWORD "passwd"` reemplazando passwd por la clave de la red.
+5. Es necesario agregar algunas librerias al proyecto pa`Adafruit_Sensor.h` al ide arduino tal como se hizo ra tener acceso ap API de uBidots y controlar con la librería de uBidots.
 
-6. Para que nuestra tarjeta pueda enviar y recibir datos desde las variables en uBidots, es necesario que se obtengan las ID's de cada variable. Para ello dentro de la cuenta de ubidots seleccione la pestaña "Devices" y luego su dispositivo, finalmente seleccione la variable deseada y la id de esta aparecerá en la ficha de la esquina izquierda, guarde esta id. En la siguiente figura de ejemplifica el procedimiento con la variable temperatura.
+9. el sensor de temperatura y humedad DHT11. Para agrear la libreria de uBidots descargue esta en formato zip de este [link](https://github.com/ubidots/ubidots-esp8266), haciendo click en el boton verde llamado "Clone or download" y seleccionado el formato zip como se muestra en la siguiente figura.
+![](images/2018/05/download_ubidots_library_arduino.PNG)
+
+6. Luego en el ide arduino, ir al menu programa->incluir libreria->añadir libreria ZIP como se muestra en la figura.
+![](images/2018/05/anadir_libreria_arduino.PNG)
+En el cuadro de dialogo que se abrirá, busque la librería en formato zip que acaba de descargar.
+
+7. Para trabajar con el sensor DHT11, es necesario descargar la librería `Adafruit_SEnsor.h` de el siguietne [link](https://github.com/adafruit/Adafruit_Sensor), tal como en la descarga de la librería anterior, seleccione el botón "clone or download" y luego haga click en "download zip".
+
+8. agregue la librería `Adafruit_Sensor.h` en formato ZIP al ide arduino tal como se hizo con la librería de uBidots.
+
+9. Finalmente agregue la libreria especifica para el sensor DHT11, mediante el menu programa->incluir libreria->gestionar libreria y luego escribir en el cuadro de búsqueda el texto DHT11. Seleccione el resultado "DHT Sensor Library by Adafruit" y luego haga click en instalar.
+![](images/2018/05/install_dth_library.gif)
+
+10. Modifique el programa con los datos necesarios para la conexión WiFi. Modifique las lineas de código al comienzo del archivo: `#define WIFISSID "essid"` reemplazando la palabra essid por el nombre de su red, también modifique la línea `#define PASSWORD "passwd"` reemplazando passwd por la clave de la red.
+
+11. Para que nuestra tarjeta pueda enviar y recibir datos desde las variables en uBidots, es necesario que se obtengan las ID's de cada variable. Para ello dentro de la cuenta de ubidots seleccione la pestaña "Devices" y luego su dispositivo, finalmente seleccione la variable deseada y la id de esta aparecerá en la ficha de la esquina izquierda, guarde esta id. En la siguiente figura de ejemplifica el procedimiento con la variable temperatura.
 ![](images/2018/05/select_id_variable.gif)
 
-9. También es necesario obtener el token de usuario de ubidots, para ello haga click en el usuario en la esquina superior derecha y luego "Api Credentials", seleccione en la sección "Tokens" un token, por ejemplo el llamado "Default token" y guarde este código. En la siguiente figura se ejemplifica este procedimeinto.
+12. También es necesario obtener el token de usuario de ubidots, para ello haga click en el usuario en la esquina superior derecha y luego "Api Credentials", seleccione en la sección "Tokens" un token, por ejemplo el llamado "Default token" y guarde este código. En la siguiente figura se ejemplifica este procedimeinto.
 ![](images/2018/05/get_token.gif)
 
-7. en el archivo `arduino_ubidots.ino`, modifique las siguientes líneas al inicio del archivo:
+13. en el archivo `arduino_ubidots.ino`, modifique las siguientes líneas al inicio del archivo:
 `#define TOKEN  ""`, pegue entre las comillas el token de usuario de ubidots, en `#define ID_T ""` pegue entre las comillas el id de la variable temperatura, en `#define ID_H ""` pegue entre las comillas el id de la variable humedad y finalmente en `#define ID_SL ""` pegue el id de la variable led.
 
-8. Presione el botón !["subir"](images/2018/05/boton_run_arduino.PNG) del Ide de Arduino para compliar el programa y cargarlo a la tarjeta, esto tomará un poco de tiempo. Si todo ha salido bien, usted podrá ver los niveles de temperatura y humedad de la sala desde el dashboard de ubidots, también podrá controlar el led de la tarjeta presionando el switch llamdo "led" del dashboard.
+14. Presione el botón !["subir"](images/2018/05/boton_run_arduino.PNG) del Ide de Arduino para compliar el programa y cargarlo a la tarjeta, esto tomará un poco de tiempo. Si todo ha salido bien, usted podrá ver los niveles de temperatura y humedad de la sala desde el dashboard de ubidots, también podrá controlar el led de la tarjeta presionando el switch llamdo "led" del dashboard.
