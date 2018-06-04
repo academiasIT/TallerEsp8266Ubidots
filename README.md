@@ -26,7 +26,7 @@ Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una rep
 9. Finalmente cree otro widget del tipo switch para controlar la variable led. Haga clic en el icono !["Add Widget"](images/2018/05/add-new-icon.png), luego seleccione la clase de widget llamada "Control", a continuacion seleccione el tipo de widget llamado "switch" y luego elija el dispositivo anteriomente creado, seleccione la variable y haga click en el boton "finish".
 ![](images/2018/05/create_widget_switch.gif)
 
-## Cableado y Programación de la tarjeta ESP8266
+### Cableado y Programación de la tarjeta ESP8266
 
 1. Arme el circuito de la siguiente figura para conectar el sensor de temperatura y humedad a la tarjeta.
 ![](images/2018/05/cableado_1_esp8266.PNG)
@@ -69,3 +69,32 @@ En el cuadro de dialogo que se abrirá, busque la librería en formato zip que a
 `#define TOKEN  ""`, pegue entre las comillas el token de usuario de ubidots, en `#define ID_T ""` pegue entre las comillas el id de la variable temperatura, en `#define ID_H ""` pegue entre las comillas el id de la variable humedad y finalmente en `#define ID_SL ""` pegue el id de la variable led.
 
 14. Presione el botón !["subir"](images/2018/05/boton_run_arduino.PNG) del Ide de Arduino para compliar el programa y cargarlo a la tarjeta, esto tomará un poco de tiempo. Si todo ha salido bien, usted podrá ver los niveles de temperatura y humedad de la sala desde el dashboard de ubidots, también podrá controlar el led de la tarjeta presionando el switch llamdo "led" del dashboard.
+
+### Desafío de Programación
+Es esta parte de la actividad, utilice lo aprendido para agregar un nuevo elemento, en este caso un servomotor, y realizar todos las madificaciones al proyecto para controlarlo desde uBidots.
+
+__**Nota**__: Un motor eléctrico normal gira continuamente, mientras que un servomotor es un motor controlado de manera electrónica, lo que permite mover el eje del motor un ángulo determinados de manera precisa.
+
+15. Conecte el Servomotor al arduino como se muestra en la figura siguiente.
+![](images/2018/05/cableado_2_esp8266.png)
+
+16. Ahora cree una nueva variable en uBidots que contenga el ángulo del eje del servomotor. Como el ángulo de giro de este servo es de 0 a 180 grados, su variable deberá tener como límite mínimo 0 y como límite máximo 180.
+
+17. Agregue al dashboard de uBidots un control tipo "slide" para la variable del servomotor. Con este control usted podrá mover el eje del motor desde uBidots.
+
+18. En esta parte deberá modificar el código de arduino para leer la variable del servomotor desde uBidots y mover el eje en el ángulo especificado por esta variable. Fijese en como el código maneja el Led, esto le ayudará a escribir las lineas necesarias para controlar el servo desde uBidots. Además, considere el siguiente código en arduino que mueve el eje del motor en un determinado ángulo (en este caso 90), utilicelo de referencia para agregar en su código las líneas necesarias para controlar el servomotor:
+
+```
+#include <Servo.h>
+
+Servo myservo;  //crea un objeto que representa al servomotor
+
+void setup() {
+  myservo.attach(15); //el servo esta conectado al pin 15 del arduino
+}
+
+void loop() {
+  int ang = 90; // ángulo en que se moverá el eje del servo
+  myservo.write(ang); //envia al servo el ángulo de giro requerido
+}
+```
