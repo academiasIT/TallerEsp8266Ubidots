@@ -38,7 +38,7 @@ Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una rep
 ![](images/2018/05/configure_arduino.gif)
 
 4. Descargue este proyecto, para ello suba al inicio de esta página y pinche el botón verde llamando "clone or download" y pinche la opción "download ZIP" como se muestra en la siguiente figura.
-![](images/2018/05/download_proyecto_arduino.png)
+![](images/2018/05/download_proyecto_arduino.PNG)
 
 5. Luego de descargar el proyecto, abra el archivo `arduino_ubidots/arduino_ubidots.ino` mediante el menu `Archivo->abrir...` .
 
