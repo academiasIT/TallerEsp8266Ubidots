@@ -37,8 +37,7 @@ Luego asigne un nombre representativo al nuevo dispositivo. Esto creará una rep
 3. Abrir el programa IDE de Arduino y configurarlo para la tarjeta utilizada, primero en el menu seleccione Herramientas->Placa->"sparkFun ESP8266 Thing Dev", luego seleccionar el puerto de comunicaciones en Herramientas->puerto->comX (la X es reemplazada según el número que aparesca en cada computador).
 ![](images/2018/05/configure_arduino.gif)
 
-4. Descargue este proyecto, para ello suba al inicio de esta página y pinche el botón verde llamando "clone or download" y pinche la opción "download ZIP" como se muestra en la siguiente figura.
-
+4. Descargue este proyecto, para ello suba al inicio de esta página y pinche el botón verde llamando "clone or download" y pinche la opción "download ZIP" como se muestra en la siguiente figura
 ![](images/2018/05/download_proyecto_arduino.png)
 
 5. Luego de descargar el proyecto, abra el archivo `arduino_ubidots/arduino_ubidots.ino` mediante el menu `Archivo->abrir...` .
